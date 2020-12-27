@@ -20,16 +20,32 @@ export default class Form extends Component {
         })
     }
 
+    addTask(task) {
+        //make a copy of our list and push elements into the copy
+        let array = this.state.totalList;
+        array.push(task);
+        
+        //reset the state of totalList
+        this.setState({
+            totalList: array
+        })
+    }
+
     render() {
         return (
-            <form>
+            <div>
                 <input 
                 name="task" 
                 type="text" 
                 onChange={(event) => this.handleInputChange(event.target.value)} 
                 value={this.state.task}/>
-                <button />
-            </form>
+                <button onClick = {() => this.addTask(this.state.task)}>add task</button>
+                
+                {/*use map function in-replacement of for-loop to print out all values in totalList */}
+                <ul>
+                    {this.state.totalList.map((value) => <li>{value}</li>)}
+                </ul>
+            </div>
         );
     }
 }

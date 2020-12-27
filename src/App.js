@@ -12,8 +12,8 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Add to your TodoList!</h1>
-      <Form add={add}/>
+      <h1>Your Daily TodoList!</h1>
+      <Form />
     </div>
   );
 }
