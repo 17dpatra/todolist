@@ -12,8 +12,12 @@ export default class Form extends Component {
         }
     }
     
+    //whenever user types, this function helps to record
     handleInputChange(e) {
-        
+        //always use setState to change the state of an element
+        this.setState({
+            task: e //setting the task the user enters to e for recording
+        })
     }
 
     render() {
