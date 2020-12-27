@@ -27,7 +27,8 @@ export default class Form extends Component {
         
         //reset the state of totalList
         this.setState({
-            totalList: array
+            totalList: array,
+            task: "" //by setting this back to empty string, once button is clicked, task goes back to empty string for a new task to be added
         })
     }
 
